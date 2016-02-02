@@ -1,0 +1,15 @@
+def fibonacci ( number ):
+    product = 0
+    term =[0,1]
+    if number==0: return term[0]
+    elif number==1: return term[1]
+    else:
+        for product in range(number-2):
+            term.append( term[product]+ term[product+1])
+    #return term[-1]        输出number位置的Fibonacci数字
+    return term             #把到number位置的Fibonacci数组按照数组的形式输出
+
+
+user_input = int( input(" Enter the number you want:" ))
+user_fibonacci = fibonacci ( user_input )
+print(user_fibonacci)
